@@ -2753,7 +2753,7 @@ BOOL WinInit( HINSTANCE hInstance)
 #endif
 
     TCHAR buf [100];
-    _stprintf(buf, TEXT("%s %s"), WINDOW_TITLE, TEXT(VERSION));
+    _stprintf(buf, TEXT("Snes9x BS-X Custom Fork v0.1")); // _stprintf(buf, TEXT("%s %s"), WINDOW_TITLE, TEXT(VERSION));
 
     DWORD dwExStyle;
     DWORD dwStyle;
