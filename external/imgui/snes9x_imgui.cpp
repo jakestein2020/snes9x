@@ -1,3 +1,4 @@
+#pragma execution_character_set("utf-8")
 #include "snes9x_imgui.h"
 #include "snes9x_imgui_noto.h"
 #include "imgui.h"
