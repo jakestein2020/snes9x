@@ -803,6 +803,12 @@ uint8 S9xBSXGetRTC (void)
 	time(&t);
 	tmr = localtime(&t);
 
+	// --- BS-X forced time override ---
+	tmr->tm_year = 95;   // 1995 (years since 1900)
+	tmr->tm_mon  = 1;    // February (0 = Jan)
+	tmr->tm_mday = 15;   // 15th
+	tmr->tm_wday = 3;    // Wednesday (0 = Sunday)
+
 	BSX.test2192[0] = 0x00;
 	BSX.test2192[1] = 0x00;
 	BSX.test2192[2] = 0x00;
