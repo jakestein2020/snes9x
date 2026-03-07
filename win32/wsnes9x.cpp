@@ -705,17 +705,17 @@ static void CenterCursor()
 
 void S9xRestoreWindowTitle ()
 {
-    TCHAR buf [1024];
+    TCHAR buf[1024];
     if (Memory.ROMFilename[0])
     {
         char def[_MAX_FNAME];
         _splitpath(Memory.ROMFilename.c_str(), NULL, NULL, def, NULL);
-        _stprintf(buf, TEXT("%s - %s %s"), (wchar_t *)Utf8ToWide(def), WINDOW_TITLE, TEXT(VERSION));
+        _stprintf(buf, TEXT("%s - Snes9x BS-X Custom Fork v0.1"), (wchar_t*)Utf8ToWide(def));
     }
     else
-        _stprintf(buf, TEXT("%s %s"), WINDOW_TITLE, TEXT(VERSION));
+        _stprintf(buf, TEXT("Snes9x BS-X Custom Fork v0.1"));
 
-    SetWindowText (GUI.hWnd, buf);
+    SetWindowText(GUI.hWnd, buf);
 }
 
 void S9xDisplayStateChange (const char *str, bool8 on)
