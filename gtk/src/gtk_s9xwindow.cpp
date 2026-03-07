@@ -948,12 +948,12 @@ void Snes9xWindow::configure_widgets()
     if (config->rom_loaded)
     {
         std::string title = S9xBasenameNoExt(Memory.ROMFilename);
-        title += " - Snes9x";
+        title += " - Snes9x BS-X v0.1";
         window->set_title(title);
     }
     else
     {
-        window->set_title("Snes9x");
+        window->set_title("Snes9x BS-X Custom Fork v0.1");
     }
 }
 
