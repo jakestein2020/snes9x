@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bsx version="0.1">
+	<channel name="Town Status" broadcast="1.1.0.5" lci="0120" timeout="10" type="2">
+		<town apu="3" radio="1" npc="0100001000000000000000010000000000000000001000000000000100100000" fountain="12" season="4" />
+	</channel>
+	<channel name="Directory" broadcast="1.1.0.6" lci="0125" timeout="10" type="3">
+		<directory>
+			<folder name="Shop" message="Shoop da woop." purpose="1" type="0" id="2" mugshot="0">
+				<file name="Photoshop" id="0" broadcast="1.3.0.0" lci="0127" timeout="10" type="5" description="This lets you shoop." usage="You can see the pixels, as you have seen many shops in your time." price="000000000000" oneuse="true" path="" autostart="0" destination="0" home="false" streamed="false" month="1" day="1" starttime="00:00" endtime="23:59" />
+			</folder>
+			<folder name="Morshu" message="Lamp oil! Rope! Bombs! You want it? It's yours my friend, as long as you have enough rubies!" purpose="1" type="1" id="23" mugshot="15">
+				<file name="Lamp Oil" id="1" broadcast="1.3.1.0" lci="0128" timeout="10" type="5" description="To lube up those lamps." usage="I use the item." price="000000000000" oneuse="false" path="" autostart="0" destination="0" home="false" streamed="false" month="1" day="1" starttime="00:00" endtime="23:59" />
+				<file name="Rope" id="2" broadcast="1.3.2.0" lci="012E" timeout="10" type="5" description="Please do not tie me up with this." usage="You have to burn the rope." price="000000000000" oneuse="false" path="" autostart="0" destination="0" home="false" streamed="false" month="1" day="1" starttime="00:00" endtime="23:59" />
+				<file name="Bombs" id="3" broadcast="1.3.3.0" lci="0130" timeout="10" type="5" description="Ka-boom!" usage="Bomberman would be most pleased." price="000000000000" oneuse="false" path="" autostart="0" destination="0" home="false" streamed="false" month="1" day="1" starttime="00:00" endtime="23:59" />
+			</folder>
+			<folder name="Folder" message="Danger, Will Robinson, danger!" purpose="1" type="0" id="0" mugshot="0" />
+			<folder name="Folder" message="This is just like one of my Japanese animes!" purpose="1" type="1" id="6" mugshot="0" />
+		</directory>
+	</channel>
+	<channel name="Welcome Message" broadcast="1.1.0.4" lci="0126" timeout="10" type="1">
+		<message>Never gonna give you up, Never gonna let you down,
+Never gonna run around
+and desert you.</message>
+	</channel>
+	<channel name="Time Channel [BS-X]" broadcast="1.1.0.8" lci="0000" timeout="10" type="0" />
+	<channel name="Time Channel [Game]" broadcast="1.2.0.48" lci="0000" timeout="10" type="0" />
+</bsx>
