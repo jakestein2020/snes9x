@@ -14,6 +14,7 @@
 #include "gfx.h"
 #include "ppu.h"
 #include "cheats.h"
+#include "bsx.h"
 
 namespace
 {
