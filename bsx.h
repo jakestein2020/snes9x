@@ -44,20 +44,21 @@ struct SBSX
 	uint16	sat_stream1_queue, sat_stream2_queue;
 };
 
-// RTC structure used by the BS-X subsystem
-struct BSX_RTC_t
+// RTC structure used by the BS-X subsystem (must match bsx.cpp exactly)
+struct SBSX_RTC
 {
-    uint8 seconds;
-    uint8 minutes;
-    uint8 hours;
-    uint8 dayweek;
-    uint8 day;
-    uint8 month;
-    uint16 year;
+    int year;
+    int month;
+    int dayweek;
+    int day;
+    int hours;
+    int minutes;
+    int seconds;
+    int ticks;
 };
 
 // Add these two externs so other files can access the BS-X RTC state
-extern struct BSX_RTC_t BSX_RTC;
+extern struct SBSX_RTC BSX_RTC;
 extern struct SBSX	BSX;
 
 uint8 S9xGetBSX (uint32);
