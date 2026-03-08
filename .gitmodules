@@ -16,3 +16,6 @@
 [submodule "external/cubeb"]
 	path = external/cubeb
 	url = https://github.com/mozilla/cubeb.git
+[submodule "external/satellawave"]
+	path = external/satellawave
+	url = https://github.com/LuigiBlood/sat_wave
