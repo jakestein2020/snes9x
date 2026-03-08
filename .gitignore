@@ -503,3 +503,15 @@ MigrationBackup/
 .DS_Store
 *.lock
 profile
+
+# Visual Studio build output
+x64/
+Debug/
+Release/
+Release*/
+*.obj
+*.pdb
+*.tlog
+*.ipdb
+*.iobj
+*.ilk
