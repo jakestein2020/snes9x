@@ -20,6 +20,7 @@ namespace
     S9xImGuiInitInfo settings;
 } // anonymous
 
+static bool show_bsx_rtc_debug = true;
 static void ImGui_DrawPressedKeys(int spacing)
 {
 
@@ -315,6 +316,39 @@ bool S9xImGuiDraw(int width, int height)
                               ImGui::DrawTextAlignment::END,
                               width - settings.spacing * 4);
     }
+	// -------------------------------
+	// BS-X RTC DEBUG OVERLAY
+	// -------------------------------
+	if (show_bsx_rtc_debug)
+	{
+		char rtcbuf[256];
+
+    // Format the BS-X RTC values
+		sprintf(rtcbuf,
+				"BS-X RTC\n"
+				"Year:   %d\n"
+				"Month:  %d\n"
+				"Day:    %d\n"
+				"Weekday:%d\n"
+				"Hour:   %d\n"
+				"Minute: %d\n"
+				"Second: %d\n",
+				BSX_RTC.year,
+				BSX_RTC.month,
+				BSX_RTC.day,
+				BSX_RTC.dayweek,
+				BSX_RTC.hours,
+				BSX_RTC.minutes,
+				BSX_RTC.seconds);
+
+    // Draw it in the top-left corner
+		ImGui_DrawTextOverlay(rtcbuf,
+							settings.spacing,
+							settings.spacing * 4,
+							settings.spacing,
+							ImGui::DrawTextAlignment::BEGIN,
+							ImGui::DrawTextAlignment::BEGIN);
+	}
 
     ImGui::Render();
 
