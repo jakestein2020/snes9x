@@ -13,6 +13,7 @@
 #include "memmap.h"
 #include "display.h"
 #include <math.h>
+#include "bsx.h"
 
 //#define BSX_DEBUG
 
@@ -34,19 +35,8 @@
 
 #define BSXPPUBASE	0x2180
 
-struct SBSX_RTC
-{
-	int year;
-	int month;
-	int dayweek;
-	int day;
-	int	hours;
-	int	minutes;
-	int	seconds;
-	int	ticks;
-};
 
-static struct SBSX_RTC	BSX_RTC;
+struct SBSX_RTC	BSX_RTC;
 
 // flash card vendor information
 static const uint8	flashcard[20] =
